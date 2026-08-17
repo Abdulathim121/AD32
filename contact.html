@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="تواصل مع المنزل الراقي للاستفسار عن التصميم الداخلي والمعماري أو الانضمام إلى شبكة المصممين."
+    >
+
+    <meta
+        name="theme-color"
+        content="#242321"
+    >
+
+    <title>
+        اتصل بنا | المنزل الراقي
+    </title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+
+    <style>
+
+        /* =====================================================
+           Variables
+        ====================================================== */
+
+        :root {
+
+            --bg: #F5F1E8;
+
+            --bg-soft: #EEE7DB;
+
+            --card: #FFFFFF;
+
+            --dark: #242321;
+
+            --dark-soft: #302E2A;
+
+            --stone: #77736C;
+
+            --stone-light: #9B958A;
+
+            --bronze: #9A7650;
+
+            --bronze-light: #B89066;
+
+            --bronze-dark: #76583C;
+
+            --sand: #D9C8AC;
+
+            --border: #D8D0C3;
+
+            --border-soft: #E8E1D6;
+
+            --container: 1320px;
+
+        }
+
+
+
+        /* =====================================================
+           Reset
+        ====================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            overflow-x: hidden;
+
+            color:
+                var(--dark);
+
+            background:
+                var(--bg);
+
+            font-family:
+                "Tajawal",
+                Arial,
+                sans-serif;
+
+        }
+
+
+        body.menu-open {
+
+            overflow: hidden;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+        }
+
+
+        input,
+        textarea,
+        select,
+        button {
+
+            font: inherit;
+
+        }
+
+
+        button {
+
+            cursor: pointer;
+
+        }
+
+
+        ::selection {
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--bronze);
+
+        }
+
+
+
+        /* =====================================================
+           Container
+        ====================================================== */
+
+        .container {
+
+            width:
+                min(
+                    var(--container),
+                    calc(100% - 48px)
+                );
+
+            margin-inline: auto;
+
+        }
+
+
+
+        /* =====================================================
+           PAGE HERO
+        ====================================================== */
+
+        .contact-hero {
+
+            min-height: 480px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--dark);
+
+        }
+
+
+        .contact-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            opacity: 0.12;
+
+            background-image:
+
+                linear-gradient(
+                    45deg,
+                    transparent 46%,
+                    rgba(184,144,102,0.40) 46%,
+                    rgba(184,144,102,0.40) 54%,
+                    transparent 54%
+                ),
+
+                linear-gradient(
+                    -45deg,
+                    transparent 46%,
+                    rgba(184,144,102,0.22) 46%,
+                    rgba(184,144,102,0.22) 54%,
+                    transparent 54%
+                );
+
+            background-size:
+                46px 46px;
+
+            mask-image:
+                linear-gradient(
+                    to left,
+                    black,
+                    transparent 60%
+                );
+
+            -webkit-mask-image:
+                linear-gradient(
+                    to left,
+                    black,
+                    transparent 60%
+                );
+
+        }
+
+
+        .contact-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 470px;
+
+            height: 470px;
+
+            left: -240px;
+
+            bottom: -270px;
+
+            border:
+                1px solid
+                rgba(184,144,102,0.18);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 0 60px
+                rgba(184,144,102,0.025),
+                0 0 0 120px
+                rgba(184,144,102,0.015);
+
+        }
+
+
+        .contact-hero-inner {
+
+            width: 100%;
+
+            padding:
+                90px 0;
+
+            position: relative;
+
+            z-index: 3;
+
+        }
+
+
+        .contact-breadcrumb {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-bottom: 30px;
+
+            color:
+                rgba(255,255,255,0.42);
+
+            font-size: 10px;
+
+        }
+
+
+        .contact-breadcrumb a {
+
+            text-decoration: none;
+
+            transition:
+                color 0.25s ease;
+
+        }
+
+
+        .contact-breadcrumb a:hover {
+
+            color:
+                #D4B18C;
+
+        }
+
+
+        .contact-breadcrumb-symbol {
+
+            width: 4px;
+
+            height: 4px;
+
+            background:
+                var(--bronze-light);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+
+
+        .contact-kicker {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+
+            color:
+                #D4B18C;
+
+            font-size: 11px;
+
+        }
+
+
+        .contact-kicker::before {
+
+            content: "";
+
+            width: 32px;
+
+            height: 1px;
+
+            background:
+                #B89066;
+
+        }
+
+
+        .contact-title {
+
+            max-width: 760px;
+
+            font-size:
+                clamp(
+                    45px,
+                    6vw,
+                    78px
+                );
+
+            line-height: 1.18;
+
+            font-weight: 400;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .contact-title span {
+
+            color:
+                #D4B18C;
+
+        }
+
+
+        .contact-hero-description {
+
+            max-width: 600px;
+
+            color:
+                rgba(255,255,255,0.57);
+
+            font-size: 14px;
+
+            line-height: 2;
+
+        }
+
+
+
+        /* =====================================================
+           Contact Main
+        ====================================================== */
+
+        .contact-section {
+
+            padding:
+                110px 0
+                125px;
+
+        }
+
+
+        .contact-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(330px, .82fr)
+                minmax(500px, 1.18fr);
+
+            gap: 70px;
+
+            align-items:
+                flex-start;
+
+        }
+
+
+
+        /* =====================================================
+           Side Info
+        ====================================================== */
+
+        .contact-info {
+
+            position: sticky;
+
+            top: 120px;
+
+        }
+
+
+        .contact-section-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color:
+                var(--bronze);
+
+            font-size: 10px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .contact-section-label::before {
+
+            content: "";
+
+            width: 5px;
+
+            height: 5px;
+
+            background:
+                var(--bronze);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+
+        .contact-info h2 {
+
+            max-width: 430px;
+
+            font-size:
+                clamp(
+                    30px,
+                    3.3vw,
+                    45px
+                );
+
+            line-height: 1.4;
+
+            font-weight: 500;
+
+            letter-spacing: -1.4px;
+
+            margin-bottom: 19px;
+
+        }
+
+
+        .contact-info-description {
+
+            max-width: 430px;
+
+            color:
+                var(--stone);
+
+            font-size: 13px;
+
+            line-height: 2;
+
+            margin-bottom: 39px;
+
+        }
+
+
+
+        /* =====================================================
+           Info Items
+        ====================================================== */
+
+        .contact-info-list {
+
+            border-top:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .contact-info-item {
+
+            min-height: 105px;
+
+            padding:
+                22px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                47px 1fr;
+
+            gap: 17px;
+
+            align-items: center;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .contact-info-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: grid;
+
+            place-items: center;
+
+            color:
+                var(--bronze);
+
+            border:
+                1px solid
+                var(--border);
+
+            background:
+                rgba(255,255,255,0.25);
+
+        }
+
+
+        .contact-info-icon svg {
+
+            width: 19px;
+
+            height: 19px;
+
+        }
+
+
+        .contact-info-copy small {
+
+            display: block;
+
+            color:
+                var(--stone);
+
+            font-size: 9px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .contact-info-copy a,
+        .contact-info-copy strong {
+
+            color:
+                var(--dark);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+        }
+
+
+        .contact-info-copy a:hover {
+
+            color:
+                var(--bronze);
+
+        }
+
+
+
+        /* =====================================================
+           Response box
+        ====================================================== */
+
+        .response-note {
+
+            margin-top: 30px;
+
+            padding:
+                20px;
+
+            position: relative;
+
+            border:
+                1px solid
+                rgba(154,118,80,0.22);
+
+            background:
+                rgba(154,118,80,0.045);
+
+        }
+
+
+        .response-note::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -1px;
+
+            right: 20px;
+
+            width: 34px;
+
+            height: 2px;
+
+            background:
+                var(--bronze);
+
+        }
+
+
+        .response-note strong {
+
+            display: block;
+
+            font-size: 12px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .response-note p {
+
+            color:
+                var(--stone);
+
+            font-size: 10px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* =====================================================
+           Form Card
+        ====================================================== */
+
+        .contact-form-card {
+
+            padding:
+                44px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                var(--card);
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            box-shadow:
+                0 24px 65px
+                rgba(36,35,33,0.065);
+
+        }
+
+
+        .contact-form-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 120px;
+
+            height: 120px;
+
+            left: -65px;
+
+            top: -65px;
+
+            border:
+                1px solid
+                rgba(154,118,80,0.14);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+
+        .form-head {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding-bottom: 28px;
+
+            margin-bottom: 30px;
+
+            border-bottom:
+                1px solid
+                var(--border-soft);
+
+        }
+
+
+        .form-head-number {
+
+            display: block;
+
+            color:
+                var(--bronze);
+
+            font-size: 9px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .form-head h3 {
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .form-head p {
+
+            color:
+                var(--stone);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* =====================================================
+           Contact Type
+        ====================================================== */
+
+        .contact-types {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 9px;
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .contact-type {
+
+            position: relative;
+
+        }
+
+
+        .contact-type input {
+
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        .contact-type label {
+
+            min-height: 76px;
+
+            padding:
+                12px 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            text-align: center;
+
+            color:
+                var(--stone);
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            background:
+                #FBFAF8;
+
+            cursor: pointer;
+
+            font-size: 10px;
+
+            transition:
+                0.25s ease;
+
+        }
+
+
+        .contact-type label svg {
+
+            width: 18px;
+
+            height: 18px;
+
+        }
+
+
+        .contact-type input:checked + label {
+
+            color:
+                var(--bronze-dark);
+
+            border-color:
+                var(--bronze);
+
+            background:
+                rgba(154,118,80,0.06);
+
+            box-shadow:
+                inset 0 -2px 0
+                var(--bronze);
+
+        }
+
+
+
+        /* =====================================================
+           Fields
+        ====================================================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap:
+                20px 17px;
+
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+
+        .form-group.full {
+
+            grid-column:
+                1 / -1;
+
+        }
+
+
+        .form-group label {
+
+            color:
+                var(--dark);
+
+            font-size: 10px;
+
+            font-weight: 500;
+
+        }
+
+
+        .required {
+
+            color:
+                var(--bronze);
+
+        }
+
+
+        .field-wrap {
+
+            position: relative;
+
+        }
+
+
+        .form-control {
+
+            width: 100%;
+
+            min-height: 51px;
+
+            padding:
+                0 16px;
+
+            outline: none;
+
+            color:
+                var(--dark);
+
+            background:
+                #FBFAF8;
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            font-size: 12px;
+
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+
+        }
+
+
+        select.form-control {
+
+            cursor: pointer;
+
+        }
+
+
+        textarea.form-control {
+
+            min-height: 145px;
+
+            resize: vertical;
+
+            padding:
+                15px 16px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .form-control::placeholder {
+
+            color:
+                #AAA49A;
+
+        }
+
+
+        .form-control:focus {
+
+            background:
+                #FFFFFF;
+
+            border-color:
+                var(--bronze);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(154,118,80,0.07);
+
+        }
+
+
+
+        /* =====================================================
+           Submit
+        ====================================================== */
+
+        .form-bottom {
+
+            margin-top: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+
+        .form-privacy {
+
+            max-width: 330px;
+
+            color:
+                var(--stone);
+
+            font-size: 9px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .form-submit {
+
+            min-width: 160px;
+
+            min-height: 52px;
+
+            padding:
+                0 21px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border:
+                1px solid
+                var(--dark);
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--dark);
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            transition:
+                0.25s ease;
+
+        }
+
+
+        .form-submit:hover {
+
+            border-color:
+                var(--bronze);
+
+            background:
+                var(--bronze);
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .form-submit svg {
+
+            width: 16px;
+
+            height: 16px;
+
+        }
+
+
+        .form-submit:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+
+        }
+
+
+
+        /* =====================================================
+           Success Toast
+        ====================================================== */
+
+        .contact-toast {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            z-index: 99999;
+
+            max-width: 370px;
+
+            padding:
+                15px 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform:
+                translateY(20px);
+
+            color:
+                var(--dark);
+
+            background:
+                #FFFFFF;
+
+            border-right:
+                3px solid
+                var(--bronze);
+
+            box-shadow:
+                0 18px 55px
+                rgba(0,0,0,0.15);
+
+            transition:
+                0.3s ease;
+
+        }
+
+
+        .contact-toast.show {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .contact-toast-icon {
+
+            width: 29px;
+
+            height: 29px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--bronze);
+
+            font-size: 12px;
+
+        }
+
+
+        .contact-toast-text strong {
+
+            display: block;
+
+            font-size: 11px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .contact-toast-text span {
+
+            color:
+                var(--stone);
+
+            font-size: 9px;
+
+        }
+
+
+
+        /* =====================================================
+           FAQ / Support Strip
+        ====================================================== */
+
+        .support-strip {
+
+            padding:
+                80px 0;
+
+            background:
+                #EDE7DC;
+
+        }
+
+
+        .support-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 1px;
+
+            background:
+                var(--border);
+
+            border:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .support-card {
+
+            min-height: 220px;
+
+            padding:
+                31px;
+
+            position: relative;
+
+            background:
+                var(--bg);
+
+        }
+
+
+        .support-card-number {
+
+            color:
+                var(--bronze);
+
+            font-size: 9px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .support-card h3 {
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .support-card p {
+
+            color:
+                var(--stone);
+
+            font-size: 11px;
+
+            line-height: 1.9;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .support-card a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color:
+                var(--bronze-dark);
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: 500;
+
+        }
+
+
+
+        /* =====================================================
+           Reveal
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(24px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+
+        /* =====================================================
+           Responsive
+        ====================================================== */
+
+        @media (max-width: 950px) {
+
+            .contact-layout {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 55px;
+
+            }
+
+
+            .contact-info {
+
+                position: static;
+            }
+
+
+            .support-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .support-card:last-child {
+
+                grid-column:
+                    1 / -1;
+            }
+
+        }
+
+
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    calc(100% - 32px);
+            }
+
+
+            .contact-hero {
+
+                min-height: 430px;
+            }
+
+
+            .contact-hero-inner {
+
+                padding:
+                    70px 0;
+            }
+
+
+            .contact-title {
+
+                letter-spacing:
+                    -2px;
+            }
+
+
+            .contact-section {
+
+                padding:
+                    80px 0;
+            }
+
+
+            .contact-form-card {
+
+                padding:
+                    30px 24px;
+            }
+
+
+            .contact-types {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .contact-type label {
+
+                min-height: 55px;
+
+                flex-direction: row;
+
+                justify-content:
+                    flex-start;
+
+                padding:
+                    0 17px;
+            }
+
+
+            .form-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .form-group.full {
+
+                grid-column:
+                    auto;
+            }
+
+
+            .form-bottom {
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .form-submit {
+
+                width: 100%;
+            }
+
+
+            .form-privacy {
+
+                max-width: none;
+            }
+
+
+            .support-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .support-card:last-child {
+
+                grid-column:
+                    auto;
+            }
+
+        }
+
+
+
+        @media (max-width: 450px) {
+
+            .container {
+
+                width:
+                    calc(100% - 24px);
+            }
+
+
+            .contact-hero {
+
+                min-height: 400px;
+            }
+
+
+            .contact-title {
+
+                font-size:
+                    42px;
+            }
+
+
+            .contact-form-card {
+
+                padding:
+                    26px 18px;
+            }
+
+
+            .contact-toast {
+
+                right: 12px;
+
+                left: 12px;
+
+                bottom: 12px;
+
+                max-width: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================================
+         Header
+    ====================================================== -->
+
+    <div id="header-placeholder"></div>
+
+
+
+    <main>
+
+
+        <!-- =================================================
+             Hero
+        ================================================== -->
+
+        <section class="contact-hero">
+
+            <div class="container">
+
+                <div class="contact-hero-inner">
+
+
+                    <div class="contact-breadcrumb">
+
+                        <a href="index.html">
+                            الرئيسية
+                        </a>
+
+                        <span
+                            class="contact-breadcrumb-symbol"
+                        ></span>
+
+                        <span>
+                            اتصل بنا
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-kicker">
+                        نحن هنا لمساعدتك
+                    </div>
+
+
+                    <h1 class="contact-title">
+
+                        أخبرنا كيف يمكن
+                        <br>
+
+                        أن
+
+                        <span>
+                            نساعدك.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="contact-hero-description">
+
+                        سواء كنت تبدأ مشروع تصميم جديد،
+                        تبحث عن المصمم المناسب، أو ترغب
+                        بالانضمام إلى مجتمع المنزل الراقي،
+                        يسعدنا أن نسمع منك.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             Contact
+        ================================================== -->
+
+        <section class="contact-section">
+
+            <div class="container">
+
+                <div class="contact-layout">
+
+
+                    <!-- =====================================
+                         Information
+                    ====================================== -->
+
+                    <aside class="contact-info reveal">
+
+
+                        <div class="contact-section-label">
+                            تواصل معنا
+                        </div>
+
+
+                        <h2>
+
+                            البداية الجيدة
+                            لمشروع استثنائي.
+
+                        </h2>
+
+
+                        <p class="contact-info-description">
+
+                            شارك معنا استفسارك أو تفاصيل
+                            مشروعك، وسيتواصل معك فريق
+                            المنزل الراقي لمساعدتك في
+                            الخطوة التالية.
+
+                        </p>
+
+
+
+                        <div class="contact-info-list">
+
+
+                            <!-- Email -->
+
+                            <div class="contact-info-item">
+
+                                <div class="contact-info-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+
+                                        <rect
+                                            x="3"
+                                            y="5"
+                                            width="18"
+                                            height="14"
+                                        ></rect>
+
+                                        <path
+                                            d="M4 7l8 6 8-6"
+                                        ></path>
+
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="contact-info-copy">
+
+                                    <small>
+                                        البريد الإلكتروني
+                                    </small>
+
+                                    <a
+                                        href="mailto:hello@almanzelalraqi.sa"
+                                    >
+                                        hello@almanzelalraqi.sa
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Location -->
+
+                            <div class="contact-info-item">
+
+                                <div class="contact-info-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+
+                                        <path
+                                            d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z"
+                                        ></path>
+
+                                        <circle
+                                            cx="12"
+                                            cy="9"
+                                            r="2.5"
+                                        ></circle>
+
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="contact-info-copy">
+
+                                    <small>
+                                        الموقع
+                                    </small>
+
+                                    <strong>
+                                        الرياض، المملكة العربية السعودية
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Working -->
+
+                            <div class="contact-info-item">
+
+                                <div class="contact-info-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="9"
+                                        ></circle>
+
+                                        <path
+                                            d="M12 7v6l4 2"
+                                        ></path>
+
+                                    </svg>
+
+                                </div>
+
+
+                                <div class="contact-info-copy">
+
+                                    <small>
+                                        أوقات التواصل
+                                    </small>
+
+                                    <strong>
+                                        الأحد — الخميس
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="response-note">
+
+                            <strong>
+                                وقت الاستجابة
+                            </strong>
+
+                            <p>
+
+                                نسعى للرد على جميع الرسائل
+                                والاستفسارات خلال أقرب وقت
+                                ممكن في أيام العمل.
+
+                            </p>
+
+                        </div>
+
+
+                    </aside>
+
+
+
+                    <!-- =====================================
+                         Form
+                    ====================================== -->
+
+                    <div class="contact-form-card reveal">
+
+
+                        <div class="form-head">
+
+                            <span class="form-head-number">
+                                01 — رسالتك
+                            </span>
+
+                            <h3>
+                                كيف يمكننا مساعدتك؟
+                            </h3>
+
+                            <p>
+                                اختر سبب التواصل ثم أدخل
+                                معلوماتك ورسالتك.
+                            </p>
+
+                        </div>
+
+
+
+                        <form
+                            id="contactForm"
+                            novalidate
+                        >
+
+
+                            <!-- Contact Type -->
+
+                            <div class="contact-types">
+
+
+                                <div class="contact-type">
+
+                                    <input
+                                        type="radio"
+                                        name="contactType"
+                                        id="typeProject"
+                                        value="project"
+                                        checked
+                                    >
+
+                                    <label for="typeProject">
+
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                        >
+
+                                            <path
+                                                d="M4 20V9l8-5 8 5v11"
+                                            ></path>
+
+                                            <path
+                                                d="M9 20v-6h6v6"
+                                            ></path>
+
+                                        </svg>
+
+                                        <span>
+                                            لدي مشروع
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="contact-type">
+
+                                    <input
+                                        type="radio"
+                                        name="contactType"
+                                        id="typeDesigner"
+                                        value="designer"
+                                    >
+
+                                    <label for="typeDesigner">
+
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                        >
+
+                                            <circle
+                                                cx="12"
+                                                cy="8"
+                                                r="3"
+                                            ></circle>
+
+                                            <path
+                                                d="M5 20c1-4 3-6 7-6s6 2 7 6"
+                                            ></path>
+
+                                        </svg>
+
+                                        <span>
+                                            أنا مصمم
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="contact-type">
+
+                                    <input
+                                        type="radio"
+                                        name="contactType"
+                                        id="typeGeneral"
+                                        value="general"
+                                    >
+
+                                    <label for="typeGeneral">
+
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                        >
+
+                                            <path
+                                                d="M4 5h16v12H8l-4 3z"
+                                            ></path>
+
+                                        </svg>
+
+                                        <span>
+                                            استفسار عام
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- Fields -->
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+                                    <label for="fullName">
+
+                                        الاسم الكامل
+
+                                        <span class="required">
+                                            *
+                                        </span>
+
+                                    </label>
+
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="اكتب اسمك"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+
+                                        البريد الإلكتروني
+
+                                        <span class="required">
+                                            *
+                                        </span>
+
+                                    </label>
+
+                                    <input
+                                        class="form-control"
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="example@email.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        رقم الجوال
+                                    </label>
+
+                                    <input
+                                        class="form-control"
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="05xxxxxxxx"
+                                        autocomplete="tel"
+                                    >
+
+                                </div>
+
+
+
+                                <div class="form-group">
+
+                                    <label for="city">
+                                        المدينة
+                                    </label>
+
+                                    <select
+                                        class="form-control"
+                                        id="city"
+                                        name="city"
+                                    >
+
+                                        <option value="">
+                                            اختر المدينة
+                                        </option>
+
+                                        <option value="riyadh">
+                                            الرياض
+                                        </option>
+
+                                        <option value="jeddah">
+                                            جدة
+                                        </option>
+
+                                        <option value="khobar">
+                                            الخبر
+                                        </option>
+
+                                        <option value="dammam">
+                                            الدمام
+                                        </option>
+
+                                        <option value="makkah">
+                                            مكة المكرمة
+                                        </option>
+
+                                        <option value="madinah">
+                                            المدينة المنورة
+                                        </option>
+
+                                        <option value="other">
+                                            مدينة أخرى
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="form-group full">
+
+                                    <label for="subject">
+
+                                        عنوان الرسالة
+
+                                        <span class="required">
+                                            *
+                                        </span>
+
+                                    </label>
+
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="مثال: أبحث عن مصمم لفيلا سكنية"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <div class="form-group full">
+
+                                    <label for="message">
+
+                                        تفاصيل الرسالة
+
+                                        <span class="required">
+                                            *
+                                        </span>
+
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="message"
+                                        name="message"
+                                        placeholder="أخبرنا عن مشروعك أو استفسارك..."
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- Bottom -->
+
+                            <div class="form-bottom">
+
+
+                                <p class="form-privacy">
+
+                                    بإرسال النموذج فإنك توافق
+                                    على استخدام بياناتك للتواصل
+                                    معك بخصوص استفسارك فقط.
+
+                                </p>
+
+
+                                <button
+                                    type="submit"
+                                    class="form-submit"
+                                    id="submitButton"
+                                >
+
+                                    <span>
+                                        إرسال الرسالة
+                                    </span>
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+
+                                        <path
+                                            d="M5 12h14"
+                                        ></path>
+
+                                        <path
+                                            d="M13 6l6 6-6 6"
+                                        ></path>
+
+                                    </svg>
+
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             Support
+        ================================================== -->
+
+        <section class="support-strip">
+
+            <div class="container">
+
+                <div class="support-grid">
+
+
+                    <article class="support-card reveal">
+
+                        <div class="support-card-number">
+                            01
+                        </div>
+
+                        <h3>
+                            تبحث عن مصمم؟
+                        </h3>
+
+                        <p>
+
+                            استكشف ملفات المصممين
+                            وأعمالهم السابقة واختر
+                            المحترف المناسب لمشروعك.
+
+                        </p>
+
+                        <a href="index.html#designers">
+
+                            استكشف المصممين
+
+                            <span>←</span>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="support-card reveal">
+
+                        <div class="support-card-number">
+                            02
+                        </div>
+
+                        <h3>
+                            أنت مصمم؟
+                        </h3>
+
+                        <p>
+
+                            انضم إلى المنزل الراقي
+                            واعرض أعمالك أمام أصحاب
+                            المشاريع الباحثين عن التميز.
+
+                        </p>
+
+                        <a href="#">
+
+                            الانضمام كمصمم
+
+                            <span>←</span>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="support-card reveal">
+
+                        <div class="support-card-number">
+                            03
+                        </div>
+
+                        <h3>
+                            تحتاج مساعدة؟
+                        </h3>
+
+                        <p>
+
+                            تعرف على طريقة استخدام
+                            المنصة والخدمات والأسئلة
+                            المتكررة قبل التواصل معنا.
+
+                        </p>
+
+                        <a href="#">
+
+                            مركز المساعدة
+
+                            <span>←</span>
+
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
+    <div id="footer-placeholder"></div>
+
+
+
+    <!-- =====================================================
+         Toast
+    ====================================================== -->
+
+    <div
+        class="contact-toast"
+        id="contactToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <span class="contact-toast-icon">
+            ✓
+        </span>
+
+        <div class="contact-toast-text">
+
+            <strong>
+                تم استلام رسالتك
+            </strong>
+
+            <span>
+                سنتواصل معك في أقرب وقت ممكن.
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        /* =====================================================
+           Load components
+        ====================================================== */
+
+        async function loadComponent(
+            containerId,
+            filePath
+        ) {
+
+
+            const container =
+                document.getElementById(
+                    containerId
+                );
+
+
+            if (!container) {
+
+                return;
+
+            }
+
+
+            try {
+
+
+                const response =
+                    await fetch(
+                        filePath
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "تعذر تحميل: " +
+                        filePath
+                    );
+
+                }
+
+
+                const html =
+                    await response.text();
+
+
+                container.innerHTML =
+                    html;
+
+
+
+                /*
+                    تشغيل JavaScript الموجود
+                    داخل الملفات المستدعاة.
+                */
+
+                const scripts =
+                    container.querySelectorAll(
+                        "script"
+                    );
+
+
+                scripts.forEach(
+                    function (oldScript) {
+
+
+                        const newScript =
+                            document.createElement(
+                                "script"
+                            );
+
+
+                        Array
+                            .from(
+                                oldScript.attributes
+                            )
+                            .forEach(
+                                function (attribute) {
+
+                                    newScript.setAttribute(
+                                        attribute.name,
+                                        attribute.value
+                                    );
+
+                                }
+                            );
+
+
+                        newScript.textContent =
+                            oldScript.textContent;
+
+
+                        oldScript.parentNode
+                            .replaceChild(
+                                newScript,
+                                oldScript
+                            );
+
+
+                    }
+                );
+
+
+            } catch (error) {
+
+
+                console.error(
+                    error
+                );
+
+
+                container.innerHTML = `
+
+                    <div
+                        style="
+                            padding:18px;
+                            text-align:center;
+                            color:#77736C;
+                            background:#F5F1E8;
+                        "
+                    >
+                        تعذر تحميل القالب.
+                    </div>
+
+                `;
+
+
+            }
+
+        }
+
+
+
+        Promise.all([
+
+            loadComponent(
+                "header-placeholder",
+                "header.html"
+            ),
+
+            loadComponent(
+                "footer-placeholder",
+                "footer.html"
+            )
+
+        ]);
+
+
+
+        /* =====================================================
+           Contact Form
+        ====================================================== */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        const submitButton =
+            document.getElementById(
+                "submitButton"
+            );
+
+
+        const contactToast =
+            document.getElementById(
+                "contactToast"
+            );
+
+
+        let toastTimer = null;
+
+
+
+        function showToast() {
+
+
+            if (!contactToast) {
+
+                return;
+
+            }
+
+
+            contactToast.classList.add(
+                "show"
+            );
+
+
+            clearTimeout(
+                toastTimer
+            );
+
+
+            toastTimer =
+                setTimeout(
+                    function () {
+
+                        contactToast
+                            .classList
+                            .remove(
+                                "show"
+                            );
+
+                    },
+                    3500
+                );
+
+
+        }
+
+
+
+        function validateEmail(
+            email
+        ) {
+
+
+            const expression =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            return expression.test(
+                email
+            );
+
+
+        }
+
+
+
+        if (contactForm) {
+
+
+            contactForm.addEventListener(
+                "submit",
+                function (event) {
+
+
+                    event.preventDefault();
+
+
+                    const fullName =
+                        document
+                            .getElementById(
+                                "fullName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "email"
+                            )
+                            .value
+                            .trim();
+
+
+                    const subject =
+                        document
+                            .getElementById(
+                                "subject"
+                            )
+                            .value
+                            .trim();
+
+
+                    const message =
+                        document
+                            .getElementById(
+                                "message"
+                            )
+                            .value
+                            .trim();
+
+
+
+                    if (
+                        !fullName ||
+                        !email ||
+                        !subject ||
+                        !message
+                    ) {
+
+
+                        alert(
+                            "يرجى تعبئة جميع الحقول المطلوبة."
+                        );
+
+
+                        return;
+
+                    }
+
+
+
+                    if (
+                        !validateEmail(
+                            email
+                        )
+                    ) {
+
+
+                        alert(
+                            "يرجى إدخال بريد إلكتروني صحيح."
+                        );
+
+
+                        return;
+
+                    }
+
+
+
+                    /*
+                        هنا لاحقًا تربط النموذج
+                        بقاعدة البيانات أو API.
+                    */
+
+
+                    submitButton.disabled =
+                        true;
+
+
+                    submitButton
+                        .querySelector("span")
+                        .textContent =
+                        "جارٍ الإرسال...";
+
+
+
+                    setTimeout(
+                        function () {
+
+
+                            contactForm.reset();
+
+
+                            submitButton.disabled =
+                                false;
+
+
+                            submitButton
+                                .querySelector("span")
+                                .textContent =
+                                "إرسال الرسالة";
+
+
+                            showToast();
+
+
+                        },
+                        600
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
+
+        /* =====================================================
+           Reveal
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+
+            const observer =
+                new IntersectionObserver(
+
+                    function (
+                        entries,
+                        revealObserver
+                    ) {
+
+
+                        entries.forEach(
+                            function (entry) {
+
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+
+                                    entry
+                                        .target
+                                        .classList
+                                        .add(
+                                            "visible"
+                                        );
+
+
+                                    revealObserver
+                                        .unobserve(
+                                            entry.target
+                                        );
+
+
+                                }
+
+
+                            }
+                        );
+
+
+                    },
+
+                    {
+
+                        threshold: 0.10
+
+                    }
+
+                );
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    observer.observe(
+                        element
+                    );
+
+                }
+            );
+
+
+        } else {
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "visible"
+                    );
+
+                }
+            );
+
+
+        }
+
+
+
+        /* =====================================================
+           Placeholder links
+        ====================================================== */
+
+        document
+            .querySelectorAll(
+                'a[href="#"]'
+            )
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+                        }
+                    );
+
+                }
+            );
+
+
+    </script>
+
+
+</body>
+
+</html>

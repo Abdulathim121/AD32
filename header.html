@@ -1,0 +1,1776 @@
+<!-- =========================================================
+     المنزل الراقي - HEADER
+     نسخة مستقرة للجوال بدون الاعتماد على JavaScript لفتح القائمة
+     Logo: media/Shaad.png
+========================================================= -->
+
+<style>
+
+    /* =========================================================
+       Variables
+    ========================================================= */
+
+    .saudi-header {
+        --sh-bg: #F5F1E8;
+        --sh-bg-soft: #EEE8DD;
+        --sh-white: #FFFFFF;
+        --sh-dark: #242321;
+        --sh-dark-soft: #302E2A;
+        --sh-text: #77736C;
+        --sh-bronze: #9A7650;
+        --sh-bronze-light: #B89066;
+        --sh-bronze-dark: #76583C;
+        --sh-border: #D8D0C3;
+
+        width: 100%;
+        position: relative;
+        z-index: 9999;
+
+        direction: rtl;
+        font-family: inherit;
+    }
+
+
+    /* =========================================================
+       Desktop Top Bar
+    ========================================================= */
+
+    .saudi-top-bar {
+        min-height: 34px;
+        position: relative;
+        overflow: hidden;
+
+        background: var(--sh-dark);
+        color: rgba(255,255,255,0.68);
+    }
+
+    .saudi-top-bar::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        opacity: 0.16;
+        pointer-events: none;
+
+        background-image:
+            linear-gradient(
+                45deg,
+                transparent 46%,
+                rgba(184,144,102,0.28) 46%,
+                rgba(184,144,102,0.28) 54%,
+                transparent 54%
+            ),
+            linear-gradient(
+                -45deg,
+                transparent 46%,
+                rgba(184,144,102,0.15) 46%,
+                rgba(184,144,102,0.15) 54%,
+                transparent 54%
+            );
+
+        background-size: 28px 28px;
+    }
+
+    .saudi-top-bar-container {
+        width: min(1320px, calc(100% - 48px));
+        min-height: 34px;
+        margin-inline: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .saudi-top-message {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        color: rgba(255,255,255,0.60);
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .saudi-top-message-symbol {
+        width: 5px;
+        height: 5px;
+        flex-shrink: 0;
+
+        background: var(--sh-bronze-light);
+        transform: rotate(45deg);
+    }
+
+    .saudi-top-links {
+        min-height: 34px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .saudi-top-link {
+        min-height: 34px;
+        padding: 0 14px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        color: rgba(255,255,255,0.56);
+        text-decoration: none;
+
+        border-right: 1px solid rgba(255,255,255,0.08);
+
+        font-size: 10px;
+
+        transition:
+            color 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .saudi-top-link:last-child {
+        border-left: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .saudi-top-link:hover {
+        color: #FFFFFF;
+        background: rgba(255,255,255,0.05);
+    }
+
+    .saudi-top-link svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .saudi-top-contact {
+        color: #D4B18C;
+    }
+
+    .saudi-top-contact:hover {
+        color: #FFFFFF;
+        background: var(--sh-bronze);
+    }
+
+
+    /* =========================================================
+       Main Header
+    ========================================================= */
+
+    .saudi-main-header {
+        width: 100%;
+        position: relative;
+
+        background: rgba(245,241,232,0.96);
+
+        border-bottom:
+            1px solid rgba(216,208,195,0.85);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        transition:
+            background 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .saudi-main-header::after {
+        content: "";
+
+        position: absolute;
+        right: 50%;
+        bottom: -1px;
+
+        width: min(180px, 20%);
+        height: 1px;
+
+        transform: translateX(50%);
+        opacity: 0.55;
+
+        background:
+            linear-gradient(
+                to left,
+                transparent,
+                var(--sh-bronze),
+                transparent
+            );
+    }
+
+    .saudi-header.scrolled .saudi-main-header {
+        background: rgba(245,241,232,0.99);
+
+        box-shadow:
+            0 12px 35px rgba(36,35,33,0.065);
+    }
+
+    .saudi-header-container {
+        width: min(1320px, calc(100% - 48px));
+        min-height: 94px;
+        margin-inline: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+
+        position: relative;
+    }
+
+
+    /* =========================================================
+       Brand
+    ========================================================= */
+
+    .saudi-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+
+        flex-shrink: 0;
+
+        color: var(--sh-dark);
+        text-decoration: none;
+    }
+
+    .saudi-brand-logo {
+        width: 66px;
+        height: 66px;
+
+        flex-shrink: 0;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 4px;
+
+        border-radius: 50%;
+
+        background:
+            linear-gradient(
+                145deg,
+                #D2B38D 0%,
+                #A77D50 52%,
+                #76583C 100%
+            );
+
+        box-shadow:
+            0 7px 22px rgba(36,35,33,0.14),
+            0 0 0 1px rgba(154,118,80,0.08);
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .saudi-brand-logo::before {
+        content: "";
+
+        position: absolute;
+        inset: -5px;
+
+        border:
+            1px solid rgba(154,118,80,0.30);
+
+        border-radius: 50%;
+    }
+
+    .saudi-brand-logo::after {
+        content: "";
+
+        position: absolute;
+        right: 50%;
+        bottom: -8px;
+
+        width: 5px;
+        height: 5px;
+
+        background: var(--sh-bronze);
+
+        box-shadow:
+            0 0 0 3px var(--sh-bg);
+
+        transform:
+            translateX(50%)
+            rotate(45deg);
+    }
+
+    .saudi-brand-logo img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+        object-position: center;
+
+        background: #FFFFFF;
+
+        border:
+            2px solid rgba(255,255,255,0.96);
+
+        box-shadow:
+            inset 0 0 0 1px rgba(154,118,80,0.08);
+    }
+
+    .saudi-brand:hover .saudi-brand-logo {
+        transform:
+            translateY(-2px)
+            scale(1.025);
+
+        box-shadow:
+            0 9px 25px rgba(36,35,33,0.17);
+    }
+
+    .saudi-brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .saudi-brand-name {
+        color: var(--sh-dark);
+
+        font-size: 21px;
+        font-weight: 700;
+
+        line-height: 1.15;
+        letter-spacing: -0.4px;
+    }
+
+    .saudi-brand-subtitle {
+        color: var(--sh-bronze);
+
+        font-size: 8px;
+        font-weight: 500;
+
+        letter-spacing: 2.2px;
+
+        direction: ltr;
+        text-align: right;
+    }
+
+
+    /* =========================================================
+       Desktop Navigation
+    ========================================================= */
+
+    .saudi-desktop-nav {
+        display: flex;
+        align-items: stretch;
+        align-self: stretch;
+        gap: 2px;
+    }
+
+    .saudi-nav-link {
+        min-width: 75px;
+        padding: 0 10px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--sh-dark);
+        text-decoration: none;
+        white-space: nowrap;
+
+        font-size: 13px;
+        font-weight: 500;
+
+        transition: color 0.25s ease;
+    }
+
+    .saudi-nav-link::before {
+        content: "";
+
+        position: absolute;
+        right: 50%;
+        bottom: -1px;
+
+        width: 0;
+        height: 2px;
+
+        transform: translateX(50%);
+
+        background: var(--sh-bronze);
+
+        transition: width 0.25s ease;
+    }
+
+    .saudi-nav-link::after {
+        content: "";
+
+        position: absolute;
+        top: 23px;
+        right: 50%;
+
+        width: 4px;
+        height: 4px;
+
+        opacity: 0;
+
+        background: var(--sh-bronze);
+
+        transform:
+            translateX(50%)
+            rotate(45deg);
+
+        transition: opacity 0.25s ease;
+    }
+
+    .saudi-nav-link:hover,
+    .saudi-nav-link.active {
+        color: var(--sh-bronze-dark);
+    }
+
+    .saudi-nav-link:hover::before,
+    .saudi-nav-link.active::before {
+        width: 28px;
+    }
+
+    .saudi-nav-link.active::after {
+        opacity: 1;
+    }
+
+
+    /* =========================================================
+       Desktop Actions
+    ========================================================= */
+
+    .saudi-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        flex-shrink: 0;
+    }
+
+    .saudi-login-link {
+        min-height: 44px;
+        padding: 0 12px;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        color: var(--sh-dark);
+        text-decoration: none;
+
+        font-size: 12px;
+        font-weight: 500;
+
+        transition: color 0.25s ease;
+    }
+
+    .saudi-login-link:hover {
+        color: var(--sh-bronze);
+    }
+
+    .saudi-login-link svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .saudi-designer-button {
+        min-height: 46px;
+        padding: 0 18px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        position: relative;
+        overflow: hidden;
+
+        color: #FFFFFF;
+        background: var(--sh-dark);
+
+        border: 1px solid var(--sh-dark);
+
+        text-decoration: none;
+
+        font-size: 12px;
+        font-weight: 500;
+
+        transition: 0.25s ease;
+    }
+
+    .saudi-designer-button::before {
+        content: "";
+
+        position: absolute;
+        right: -35px;
+        top: -35px;
+
+        width: 70px;
+        height: 70px;
+
+        border:
+            1px solid rgba(184,144,102,0.28);
+
+        transform: rotate(45deg);
+    }
+
+    .saudi-designer-button:hover {
+        background: var(--sh-bronze);
+        border-color: var(--sh-bronze);
+
+        transform: translateY(-2px);
+    }
+
+    .saudi-designer-button span,
+    .saudi-designer-button svg {
+        position: relative;
+        z-index: 2;
+    }
+
+    .saudi-designer-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* =========================================================
+       Mobile Details Menu
+       يعتمد على HTML/CSS فقط
+    ========================================================= */
+
+    .saudi-mobile-menu {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .saudi-mobile-menu summary {
+        list-style: none;
+    }
+
+    .saudi-mobile-menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .saudi-mobile-menu-button {
+        width: 46px;
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border:
+            1px solid var(--sh-border);
+
+        background:
+            rgba(255,255,255,0.38);
+
+        cursor: pointer;
+
+        transition:
+            border-color 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .saudi-mobile-menu-button:hover {
+        border-color: var(--sh-bronze);
+        background: #FFFFFF;
+    }
+
+    .saudi-mobile-menu-lines {
+        width: 20px;
+        height: 15px;
+
+        position: relative;
+    }
+
+    .saudi-mobile-menu-lines span {
+        height: 1.5px;
+
+        position: absolute;
+        right: 0;
+
+        border-radius: 20px;
+
+        background: var(--sh-dark);
+
+        transition:
+            top 0.25s ease,
+            width 0.25s ease,
+            opacity 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .saudi-mobile-menu-lines span:nth-child(1) {
+        top: 0;
+        width: 20px;
+    }
+
+    .saudi-mobile-menu-lines span:nth-child(2) {
+        top: 6.5px;
+        width: 14px;
+    }
+
+    .saudi-mobile-menu-lines span:nth-child(3) {
+        top: 13px;
+        width: 20px;
+    }
+
+    .saudi-mobile-menu[open]
+    .saudi-mobile-menu-lines span:nth-child(1) {
+        top: 6.5px;
+        transform: rotate(45deg);
+    }
+
+    .saudi-mobile-menu[open]
+    .saudi-mobile-menu-lines span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(5px);
+    }
+
+    .saudi-mobile-menu[open]
+    .saudi-mobile-menu-lines span:nth-child(3) {
+        top: 6.5px;
+        transform: rotate(-45deg);
+    }
+
+
+    /* =========================================================
+       Mobile Panel
+    ========================================================= */
+
+    .saudi-mobile-panel {
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        max-height:
+            calc(100vh - 78px);
+
+        overflow-y: auto;
+
+        background:
+            rgba(245,241,232,0.995);
+
+        border-top:
+            1px solid var(--sh-border);
+
+        border-bottom:
+            1px solid var(--sh-border);
+
+        box-shadow:
+            0 24px 44px rgba(36,35,33,0.12);
+    }
+
+    .saudi-mobile-panel-head {
+        min-height: 56px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+
+        padding: 0 18px;
+
+        position: relative;
+        overflow: hidden;
+
+        color: #FFFFFF;
+        background: var(--sh-dark);
+    }
+
+    .saudi-mobile-panel-head::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        opacity: 0.12;
+
+        background-image:
+            linear-gradient(
+                45deg,
+                transparent 46%,
+                rgba(184,144,102,0.5) 46%,
+                rgba(184,144,102,0.5) 54%,
+                transparent 54%
+            ),
+            linear-gradient(
+                -45deg,
+                transparent 46%,
+                rgba(184,144,102,0.25) 46%,
+                rgba(184,144,102,0.25) 54%,
+                transparent 54%
+            );
+
+        background-size: 28px 28px;
+    }
+
+    .saudi-mobile-panel-title,
+    .saudi-mobile-panel-subtitle {
+        position: relative;
+        z-index: 2;
+    }
+
+    .saudi-mobile-panel-title {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .saudi-mobile-panel-title::before {
+        content: "";
+
+        width: 5px;
+        height: 5px;
+
+        background: var(--sh-bronze-light);
+
+        transform: rotate(45deg);
+    }
+
+    .saudi-mobile-panel-subtitle {
+        color: rgba(255,255,255,0.43);
+        font-size: 9px;
+    }
+
+    .saudi-mobile-nav {
+        display: flex;
+        flex-direction: column;
+
+        padding: 5px 16px 0;
+    }
+
+    .saudi-mobile-nav-link {
+        min-height: 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 3px;
+
+        color: var(--sh-dark);
+        text-decoration: none;
+
+        border-bottom:
+            1px solid rgba(216,208,195,0.72);
+
+        font-size: 14px;
+        font-weight: 500;
+
+        transition:
+            color 0.25s ease,
+            padding 0.25s ease;
+    }
+
+    .saudi-mobile-nav-link::after {
+        content: "";
+
+        width: 5px;
+        height: 5px;
+
+        opacity: 0;
+
+        background: var(--sh-bronze);
+
+        transform: rotate(45deg);
+
+        transition: opacity 0.25s ease;
+    }
+
+    .saudi-mobile-nav-link:hover,
+    .saudi-mobile-nav-link.active {
+        color: var(--sh-bronze-dark);
+        padding-right: 6px;
+    }
+
+    .saudi-mobile-nav-link:hover::after,
+    .saudi-mobile-nav-link.active::after {
+        opacity: 1;
+    }
+
+    .saudi-mobile-tools {
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+
+        padding: 17px 16px 8px;
+    }
+
+    .saudi-mobile-tool {
+        min-height: 66px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        color: var(--sh-text);
+
+        border:
+            1px solid var(--sh-border);
+
+        background:
+            rgba(255,255,255,0.45);
+
+        text-decoration: none;
+        text-align: center;
+
+        font-size: 10px;
+
+        transition: 0.25s ease;
+    }
+
+    .saudi-mobile-tool:hover {
+        color: var(--sh-bronze-dark);
+        border-color: var(--sh-bronze);
+        background: #FFFFFF;
+    }
+
+    .saudi-mobile-tool svg {
+        width: 18px;
+        height: 18px;
+
+        color: var(--sh-bronze);
+    }
+
+    .saudi-mobile-actions {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        padding: 8px 16px 16px;
+    }
+
+    .saudi-mobile-login,
+    .saudi-mobile-designer {
+        min-height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .saudi-mobile-login {
+        color: var(--sh-dark);
+
+        border:
+            1px solid var(--sh-border);
+
+        background:
+            rgba(255,255,255,0.45);
+    }
+
+    .saudi-mobile-designer {
+        color: #FFFFFF;
+
+        border:
+            1px solid var(--sh-dark);
+
+        background: var(--sh-dark);
+    }
+
+    .saudi-mobile-identity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        padding: 14px 16px 18px;
+
+        color: var(--sh-text);
+
+        border-top:
+            1px solid rgba(216,208,195,0.60);
+
+        font-size: 9px;
+    }
+
+    .saudi-mobile-identity::before {
+        content: "";
+
+        width: 5px;
+        height: 5px;
+
+        background: var(--sh-bronze);
+
+        transform: rotate(45deg);
+    }
+
+
+    /* =========================================================
+       Responsive
+    ========================================================= */
+
+    @media (max-width: 1180px) {
+
+        .saudi-nav-link {
+            min-width: auto;
+            padding: 0 8px;
+        }
+
+        .saudi-brand-subtitle {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 1060px) {
+
+        .saudi-designer-button {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 920px) {
+
+        .saudi-top-bar {
+            display: none;
+        }
+
+        .saudi-main-header {
+            background: rgba(245,241,232,0.99);
+        }
+
+        .saudi-header-container {
+            width: min(calc(100% - 28px), 1320px);
+            min-height: 78px;
+
+            gap: 14px;
+        }
+
+        .saudi-brand {
+            gap: 10px;
+        }
+
+        .saudi-brand-logo {
+            width: 50px;
+            height: 50px;
+
+            padding: 3px;
+        }
+
+        .saudi-brand-logo::before {
+            inset: -4px;
+        }
+
+        .saudi-brand-logo::after {
+            width: 4px;
+            height: 4px;
+
+            bottom: -6px;
+        }
+
+        .saudi-brand-name {
+            font-size: 18px;
+        }
+
+        .saudi-brand-subtitle {
+            display: none;
+        }
+
+        .saudi-desktop-nav,
+        .saudi-login-link,
+        .saudi-designer-button {
+            display: none;
+        }
+
+        .saudi-mobile-menu {
+            display: block;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+
+        .saudi-header-container {
+            width: calc(100% - 22px);
+            min-height: 74px;
+        }
+
+        .saudi-brand-logo {
+            width: 46px;
+            height: 46px;
+        }
+
+        .saudi-brand-name {
+            font-size: 16px;
+        }
+
+        .saudi-mobile-menu-button {
+            width: 43px;
+            height: 43px;
+        }
+
+        .saudi-mobile-panel {
+            max-height:
+                calc(100vh - 74px);
+        }
+    }
+
+
+    @media (max-width: 350px) {
+
+        .saudi-brand-logo {
+            width: 43px;
+            height: 43px;
+        }
+
+        .saudi-brand-name {
+            font-size: 15px;
+        }
+
+        .saudi-mobile-menu-button {
+            width: 41px;
+            height: 41px;
+        }
+
+        .saudi-mobile-actions {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header
+    class="saudi-header"
+    id="saudiHeader"
+>
+
+
+    <!-- =====================================================
+         Desktop Top Bar
+    ====================================================== -->
+
+    <div class="saudi-top-bar">
+
+        <div class="saudi-top-bar-container">
+
+
+            <div class="saudi-top-message">
+
+                <span class="saudi-top-message-symbol"></span>
+
+                <span>
+                    منصة سعودية للتصميم الداخلي والمعماري
+                </span>
+
+            </div>
+
+
+            <nav class="saudi-top-links">
+
+
+                <a
+                    href="#"
+                    class="saudi-top-link"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                        ></circle>
+
+                        <path
+                            d="M9.8 9a2.3 2.3 0 014.4 1c0 1.8-2.2 2-2.2 3.6"
+                        ></path>
+
+                        <path
+                            d="M12 17h.01"
+                        ></path>
+
+                    </svg>
+
+                    <span>
+                        مركز المساعدة
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="
+                        saudi-top-link
+                        saudi-top-contact
+                    "
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                    >
+
+                        <path
+                            d="M4 5h16v12H8l-4 3z"
+                        ></path>
+
+                        <path
+                            d="M8 9h8"
+                        ></path>
+
+                        <path
+                            d="M8 13h5"
+                        ></path>
+
+                    </svg>
+
+                    <span>
+                        اتصل بنا
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         Main Header
+    ====================================================== -->
+
+    <div class="saudi-main-header">
+
+        <div class="saudi-header-container">
+
+
+            <!-- =================================================
+                 Logo
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="saudi-brand"
+                aria-label="المنزل الراقي"
+            >
+
+                <span class="saudi-brand-logo">
+
+                    <img
+                        src="media/Shaad.png"
+                        alt="شعار المنزل الراقي"
+                        loading="eager"
+                    >
+
+                </span>
+
+
+                <span class="saudi-brand-text">
+
+                    <span class="saudi-brand-name">
+                        المنزل الراقي
+                    </span>
+
+                    <span class="saudi-brand-subtitle">
+                        ELEGANT HOME
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 Desktop Navigation
+            ================================================== -->
+
+            <nav
+                class="saudi-desktop-nav"
+                id="saudiDesktopNav"
+                aria-label="القائمة الرئيسية"
+            >
+
+                <a
+                    href="index.html#home"
+                    class="saudi-nav-link"
+                    data-section="home"
+                >
+                    الرئيسية
+                </a>
+
+
+                <a
+                    href="index.html#projects"
+                    class="saudi-nav-link"
+                    data-section="projects"
+                >
+                    المشاريع
+                </a>
+
+
+                <a
+                    href="index.html#services"
+                    class="saudi-nav-link"
+                    data-section="services"
+                >
+                    الخدمات
+                </a>
+
+
+                <a
+                    href="index.html#about"
+                    class="saudi-nav-link"
+                    data-section="about"
+                >
+                    عن المنصة
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="saudi-nav-link"
+                    data-page="contact"
+                >
+                    اتصل بنا
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 Actions
+            ================================================== -->
+
+            <div class="saudi-header-actions">
+
+
+                <a
+                    href="#"
+                    class="saudi-login-link"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="3.5"
+                        ></circle>
+
+                        <path
+                            d="M5 20c.8-4 3.2-6 7-6s6.2 2 7 6"
+                        ></path>
+
+                    </svg>
+
+                    <span>
+                        تسجيل الدخول
+                    </span>
+
+                </a>
+
+
+                <!-- =================================================
+                     Mobile Menu
+                     يستخدم details / summary
+                     لذلك يعمل بدون JavaScript
+                ================================================== -->
+
+                <details
+                    class="saudi-mobile-menu"
+                    id="saudiMobileMenu"
+                >
+
+                    <summary
+                        class="saudi-mobile-menu-button"
+                        aria-label="فتح القائمة"
+                    >
+
+                        <span class="saudi-mobile-menu-lines">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </span>
+
+                    </summary>
+
+
+                    <div class="saudi-mobile-panel">
+
+
+                        <div class="saudi-mobile-panel-head">
+
+                            <span class="saudi-mobile-panel-title">
+                                القائمة الرئيسية
+                            </span>
+
+                            <span class="saudi-mobile-panel-subtitle">
+                                المنزل الراقي
+                            </span>
+
+                        </div>
+
+
+                        <nav
+                            class="saudi-mobile-nav"
+                            aria-label="قائمة الجوال"
+                        >
+
+                            <a
+                                href="index.html#home"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-section="home"
+                            >
+                                الرئيسية
+                            </a>
+
+
+                            <a
+                                href="index.html#projects"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-section="projects"
+                            >
+                                المشاريع
+                            </a>
+
+
+                            <a
+                                href="index.html#services"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-section="services"
+                            >
+                                الخدمات
+                            </a>
+
+
+                            <a
+                                href="index.html#about"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-section="about"
+                            >
+                                عن المنصة
+                            </a>
+
+
+                            <a
+                                href="contact.html"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-page="contact"
+                            >
+                                اتصل بنا
+                            </a>
+
+                        </nav>
+
+
+                        <div class="saudi-mobile-tools">
+
+
+                            <a
+                                href="#"
+                                class="saudi-mobile-tool"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="9"
+                                    ></circle>
+
+                                    <path
+                                        d="M9.8 9a2.3 2.3 0 014.4 1c0 1.8-2.2 2-2.2 3.6"
+                                    ></path>
+
+                                    <path
+                                        d="M12 17h.01"
+                                    ></path>
+
+                                </svg>
+
+                                <span>
+                                    مركز المساعدة
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="contact.html"
+                                class="saudi-mobile-tool"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+
+                                    <path
+                                        d="M4 5h16v12H8l-4 3z"
+                                    ></path>
+
+                                    <path
+                                        d="M8 9h8"
+                                    ></path>
+
+                                    <path
+                                        d="M8 13h5"
+                                    ></path>
+
+                                </svg>
+
+                                <span>
+                                    اتصل بنا
+                                </span>
+
+                            </a>
+
+
+                        </div>
+
+
+                        <div class="saudi-mobile-actions">
+
+
+                            <a
+                                href="#"
+                                class="saudi-mobile-login"
+                            >
+                                تسجيل الدخول
+                            </a>
+
+
+                        </div>
+
+
+                        <div class="saudi-mobile-identity">
+
+                            <span>
+                                صُمم بروح سعودية
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</header>
+
+
+<script>
+
+(function () {
+
+    /*
+        ملاحظة مهمة:
+        فتح وإغلاق قائمة الجوال لا يعتمد على هذا السكربت.
+        القائمة تعمل عبر <details> و <summary> من HTML نفسه.
+        JavaScript هنا فقط للإضافات الثانوية.
+    */
+
+
+    const header =
+        document.getElementById(
+            "saudiHeader"
+        );
+
+
+    if (!header) {
+        return;
+    }
+
+
+    /* =========================================================
+       Scroll State
+    ========================================================= */
+
+    function updateHeaderState() {
+
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 20
+        );
+
+    }
+
+
+    updateHeaderState();
+
+
+    window.addEventListener(
+        "scroll",
+        updateHeaderState,
+        {
+            passive: true
+        }
+    );
+
+
+    /* =========================================================
+       Active Page
+    ========================================================= */
+
+    const desktopLinks =
+        header.querySelectorAll(
+            ".saudi-nav-link"
+        );
+
+
+    const mobileLinks =
+        header.querySelectorAll(
+            ".saudi-mobile-nav-link"
+        );
+
+
+    function clearActive() {
+
+        desktopLinks.forEach(
+            function (link) {
+                link.classList.remove("active");
+            }
+        );
+
+
+        mobileLinks.forEach(
+            function (link) {
+                link.classList.remove("active");
+            }
+        );
+
+    }
+
+
+    const currentFile =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+
+    if (
+        currentFile === "contact.html"
+    ) {
+
+        clearActive();
+
+
+        const desktopContact =
+            header.querySelector(
+                '[data-page="contact"]'
+            );
+
+
+        const mobileContact =
+            header.querySelector(
+                '[data-mobile-page="contact"]'
+            );
+
+
+        if (desktopContact) {
+            desktopContact.classList.add("active");
+        }
+
+
+        if (mobileContact) {
+            mobileContact.classList.add("active");
+        }
+
+    } else {
+
+
+        function setActiveFromHash() {
+
+            clearActive();
+
+
+            const section =
+                window.location.hash
+                    .replace("#", "") ||
+                "home";
+
+
+            let desktopActive =
+                header.querySelector(
+                    '[data-section="' +
+                    section +
+                    '"]'
+                );
+
+
+            let mobileActive =
+                header.querySelector(
+                    '[data-mobile-section="' +
+                    section +
+                    '"]'
+                );
+
+
+            if (!desktopActive) {
+
+                desktopActive =
+                    header.querySelector(
+                        '[data-section="home"]'
+                    );
+
+            }
+
+
+            if (!mobileActive) {
+
+                mobileActive =
+                    header.querySelector(
+                        '[data-mobile-section="home"]'
+                    );
+
+            }
+
+
+            if (desktopActive) {
+                desktopActive.classList.add("active");
+            }
+
+
+            if (mobileActive) {
+                mobileActive.classList.add("active");
+            }
+
+        }
+
+
+        setActiveFromHash();
+
+
+        window.addEventListener(
+            "hashchange",
+            setActiveFromHash
+        );
+
+    }
+
+
+    /* =========================================================
+       Close details after mobile link click
+       هذه إضافة فقط، وليست ضرورية لفتح القائمة
+    ========================================================= */
+
+    const mobileMenu =
+        document.getElementById(
+            "saudiMobileMenu"
+        );
+
+
+    if (mobileMenu) {
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            mobileMenu.removeAttribute(
+                                "open"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+    }
+
+
+    /* =========================================================
+       Placeholder Links
+    ========================================================= */
+
+    header
+        .querySelectorAll(
+            'a[href="#"]'
+        )
+        .forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.preventDefault();
+
+                    }
+                );
+
+            }
+        );
+
+
+})();
+
+</script>
