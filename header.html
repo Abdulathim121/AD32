@@ -1247,6 +1247,15 @@
 
 
                 <a
+                    href="designers.html"
+                    class="saudi-nav-link"
+                    data-page="designers"
+                >
+                    المصممون
+                </a>
+
+
+                <a
                     href="index.html#services"
                     class="saudi-nav-link"
                     data-section="services"
@@ -1376,6 +1385,15 @@
                                 data-mobile-section="projects"
                             >
                                 المشاريع
+                            </a>
+
+
+                            <a
+                                href="designers.html"
+                                class="saudi-mobile-nav-link"
+                                data-mobile-page="designers"
+                            >
+                                المصممون
                             </a>
 
 
@@ -1605,13 +1623,53 @@
 
 
     const currentFile =
-        window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase();
+        (
+            window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase()
+            || "index.html"
+        );
 
 
     if (
+        currentFile === "designers.html"
+    ) {
+
+        clearActive();
+
+
+        const desktopDesigners =
+            header.querySelector(
+                '[data-page="designers"]'
+            );
+
+
+        const mobileDesigners =
+            header.querySelector(
+                '[data-mobile-page="designers"]'
+            );
+
+
+        if (desktopDesigners) {
+
+            desktopDesigners.classList.add(
+                "active"
+            );
+
+        }
+
+
+        if (mobileDesigners) {
+
+            mobileDesigners.classList.add(
+                "active"
+            );
+
+        }
+
+
+    } else if (
         currentFile === "contact.html"
     ) {
 
@@ -1631,13 +1689,22 @@
 
 
         if (desktopContact) {
-            desktopContact.classList.add("active");
+
+            desktopContact.classList.add(
+                "active"
+            );
+
         }
 
 
         if (mobileContact) {
-            mobileContact.classList.add("active");
+
+            mobileContact.classList.add(
+                "active"
+            );
+
         }
+
 
     } else {
 
@@ -1690,12 +1757,20 @@
 
 
             if (desktopActive) {
-                desktopActive.classList.add("active");
+
+                desktopActive.classList.add(
+                    "active"
+                );
+
             }
 
 
             if (mobileActive) {
-                mobileActive.classList.add("active");
+
+                mobileActive.classList.add(
+                    "active"
+                );
+
             }
 
         }

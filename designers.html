@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="المصممون - المنزل الراقي"
+    >
+
+    <meta
+        name="theme-color"
+        content="#242321"
+    >
+
+    <title>
+        المصممون | المنزل الراقي
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+
+            --bg: #F5F1E8;
+            --bg-soft: #EEE7DB;
+            --card: #FFFFFF;
+
+            --dark: #242321;
+            --stone: #77736C;
+
+            --bronze: #9A7650;
+            --bronze-light: #B89066;
+            --bronze-dark: #76583C;
+
+            --border: #D8D0C3;
+            --border-soft: #E7E0D5;
+
+            --container: 1320px;
+
+        }
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+
+            background:
+                var(--bg);
+
+            color:
+                var(--dark);
+
+            font-family:
+                "Tajawal",
+                Arial,
+                sans-serif;
+
+            overflow-x: hidden;
+
+        }
+
+        body.menu-open {
+
+            overflow: hidden;
+
+        }
+
+        a {
+
+            color: inherit;
+
+        }
+
+        img {
+
+            display: block;
+
+            width: 100%;
+
+        }
+
+        button,
+        input {
+
+            font: inherit;
+
+        }
+
+        ::selection {
+
+            background:
+                var(--bronze);
+
+            color:
+                #FFFFFF;
+
+        }
+
+        .container {
+
+            width:
+                min(
+                    var(--container),
+                    calc(100% - 48px)
+                );
+
+            margin-inline: auto;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .designers-hero {
+
+            min-height: 470px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                var(--dark);
+
+            color:
+                #FFFFFF;
+
+        }
+
+        .designers-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            opacity: 0.13;
+
+            background-image:
+
+                linear-gradient(
+                    45deg,
+                    transparent 46%,
+                    rgba(184,144,102,0.45) 46%,
+                    rgba(184,144,102,0.45) 54%,
+                    transparent 54%
+                ),
+
+                linear-gradient(
+                    -45deg,
+                    transparent 46%,
+                    rgba(184,144,102,0.20) 46%,
+                    rgba(184,144,102,0.20) 54%,
+                    transparent 54%
+                );
+
+            background-size:
+                44px 44px;
+
+        }
+
+        .designers-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: -230px;
+            bottom: -245px;
+
+            width: 420px;
+            height: 420px;
+
+            border:
+                1px solid
+                rgba(184,144,102,0.18);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+        .designers-hero-inner {
+
+            width: 100%;
+
+            padding:
+                85px 0;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .breadcrumb {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-bottom: 28px;
+
+            color:
+                rgba(255,255,255,0.42);
+
+            font-size: 10px;
+
+        }
+
+        .breadcrumb a {
+
+            text-decoration: none;
+
+        }
+
+        .breadcrumb-symbol {
+
+            width: 4px;
+            height: 4px;
+
+            background:
+                var(--bronze-light);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+        .hero-kicker {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 17px;
+
+            color:
+                #D5B28E;
+
+            font-size: 10px;
+
+        }
+
+        .hero-kicker::before {
+
+            content: "";
+
+            width: 31px;
+            height: 1px;
+
+            background:
+                var(--bronze-light);
+
+        }
+
+        .hero-title {
+
+            max-width: 820px;
+
+            margin-bottom: 20px;
+
+            font-size:
+                clamp(
+                    44px,
+                    6vw,
+                    78px
+                );
+
+            font-weight: 400;
+
+            line-height: 1.2;
+
+            letter-spacing: -2.8px;
+
+        }
+
+        .hero-title span {
+
+            color:
+                #D4B18C;
+
+        }
+
+        .hero-description {
+
+            max-width: 650px;
+
+            color:
+                rgba(255,255,255,0.58);
+
+            font-size: 14px;
+
+            line-height: 2;
+
+        }
+
+
+        /* =====================================================
+           FILTER BAR
+        ====================================================== */
+
+        .toolbar {
+
+            padding:
+                25px 0;
+
+            background:
+                #FFFFFF;
+
+            border-bottom:
+                1px solid
+                var(--border-soft);
+
+        }
+
+        .toolbar-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+        .search-box {
+
+            width:
+                min(
+                    430px,
+                    100%
+                );
+
+            min-height: 47px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding:
+                0 15px;
+
+            background:
+                #FBFAF8;
+
+            border:
+                1px solid
+                var(--border);
+
+        }
+
+        .search-box svg {
+
+            width: 17px;
+            height: 17px;
+
+            color:
+                var(--bronze);
+
+            flex-shrink: 0;
+
+        }
+
+        .search-box input {
+
+            width: 100%;
+
+            border: 0;
+
+            outline: 0;
+
+            background:
+                transparent;
+
+            color:
+                var(--dark);
+
+            font-size: 11px;
+
+        }
+
+        .filter-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+        }
+
+        .filter-button {
+
+            min-height: 36px;
+
+            padding:
+                0 13px;
+
+            color:
+                var(--stone);
+
+            background:
+                var(--bg);
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            cursor: pointer;
+
+            font-size: 10px;
+
+            transition:
+                0.25s ease;
+
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+
+            color:
+                var(--bronze-dark);
+
+            border-color:
+                var(--bronze);
+
+            background:
+                rgba(154,118,80,0.06);
+
+        }
+
+
+        /* =====================================================
+           SECTION
+        ====================================================== */
+
+        .designers-section {
+
+            padding:
+                105px 0
+                120px;
+
+        }
+
+        .section-head {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 45px;
+
+            margin-bottom: 48px;
+
+        }
+
+        .section-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-bottom: 15px;
+
+            color:
+                var(--bronze);
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+        }
+
+        .section-label::before {
+
+            content: "";
+
+            width: 5px;
+            height: 5px;
+
+            background:
+                var(--bronze);
+
+            transform:
+                rotate(45deg);
+
+        }
+
+        .section-title {
+
+            max-width: 690px;
+
+            font-size:
+                clamp(
+                    31px,
+                    4vw,
+                    51px
+                );
+
+            line-height: 1.4;
+
+            font-weight: 500;
+
+            letter-spacing: -1.6px;
+
+        }
+
+        .section-description {
+
+            max-width: 555px;
+
+            color:
+                var(--stone);
+
+            font-size: 13px;
+
+            line-height: 2;
+
+        }
+
+
+        /* =====================================================
+           CARDS
+        ====================================================== */
+
+        .designer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+        }
+
+        .designer-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                #FFFFFF;
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+        .designer-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 22px 55px
+                rgba(36,35,33,0.08);
+
+        }
+
+        .designer-cover {
+
+            height: 260px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                var(--dark);
+
+        }
+
+        .designer-cover img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter:
+                saturate(0.72)
+                contrast(1.02);
+
+            transition:
+                transform 0.55s ease;
+
+        }
+
+        .designer-card:hover
+        .designer-cover img {
+
+            transform:
+                scale(1.04);
+
+        }
+
+        .designer-cover::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(26,24,21,0.46),
+                    transparent 60%
+                );
+
+        }
+
+        .designer-city {
+
+            position: absolute;
+
+            top: 16px;
+            right: 16px;
+
+            z-index: 3;
+
+            padding:
+                7px 10px;
+
+            background:
+                rgba(255,255,255,0.92);
+
+            font-size: 9px;
+
+        }
+
+        .designer-logo {
+
+            width: 66px;
+            height: 66px;
+
+            position: absolute;
+
+            right: 21px;
+            top: 226px;
+
+            z-index: 4;
+
+            display: grid;
+
+            place-items: center;
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--dark);
+
+            border:
+                4px solid
+                #FFFFFF;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+        }
+
+        .designer-card-body {
+
+            padding:
+                45px 21px
+                22px;
+
+        }
+
+        .designer-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 8px;
+
+        }
+
+        .designer-heading h3 {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+        }
+
+        .verified {
+
+            color:
+                var(--bronze);
+
+            font-size: 9px;
+
+            white-space: nowrap;
+
+        }
+
+        .designer-specialty {
+
+            min-height: 39px;
+
+            color:
+                var(--stone);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+        .designer-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin:
+                17px 0;
+
+        }
+
+        .designer-tag {
+
+            padding:
+                6px 8px;
+
+            color:
+                var(--stone);
+
+            background:
+                var(--bg);
+
+            border:
+                1px solid
+                var(--border-soft);
+
+            font-size: 9px;
+
+        }
+
+        .designer-meta {
+
+            padding-top: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            border-top:
+                1px solid
+                var(--border-soft);
+
+            color:
+                var(--stone);
+
+            font-size: 10px;
+
+        }
+
+        .rating {
+
+            color:
+                var(--dark);
+
+        }
+
+        .rating strong {
+
+            color:
+                var(--bronze);
+
+            font-weight: 400;
+
+        }
+
+        .designer-link {
+
+            min-height: 43px;
+
+            margin-top: 17px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            color:
+                var(--dark);
+
+            border:
+                1px solid
+                var(--border);
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            transition:
+                0.25s ease;
+
+        }
+
+        .designer-link:hover {
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--dark);
+
+            border-color:
+                var(--dark);
+
+        }
+
+
+        /* =====================================================
+           CHOOSE
+        ====================================================== */
+
+        .choose-section {
+
+            padding:
+                100px 0;
+
+            background:
+                #EDE7DC;
+
+        }
+
+        .choose-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 1px;
+
+            background:
+                var(--border);
+
+            border:
+                1px solid
+                var(--border);
+
+        }
+
+        .choose-card {
+
+            min-height: 190px;
+
+            padding:
+                25px;
+
+            background:
+                var(--bg);
+
+        }
+
+        .choose-number {
+
+            display: block;
+
+            margin-bottom: 18px;
+
+            color:
+                var(--bronze);
+
+            font-size: 9px;
+
+        }
+
+        .choose-card h3 {
+
+            margin-bottom: 8px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+        }
+
+        .choose-card p {
+
+            color:
+                var(--stone);
+
+            font-size: 11px;
+
+            line-height: 1.85;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .cta-section {
+
+            padding:
+                95px 0
+                110px;
+
+        }
+
+        .cta-box {
+
+            min-height: 360px;
+
+            padding:
+                60px 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--dark);
+
+        }
+
+        .cta-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 20px;
+
+            border:
+                1px solid
+                rgba(184,144,102,0.30);
+
+        }
+
+        .cta-content {
+
+            max-width: 690px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .cta-content small {
+
+            color:
+                #D5B28E;
+
+            font-size: 9px;
+
+        }
+
+        .cta-content h2 {
+
+            margin:
+                12px 0
+                14px;
+
+            font-size:
+                clamp(
+                    31px,
+                    4vw,
+                    48px
+                );
+
+            font-weight: 400;
+
+            line-height: 1.4;
+
+        }
+
+        .cta-content p {
+
+            max-width: 570px;
+
+            margin:
+                0 auto
+                24px;
+
+            color:
+                rgba(255,255,255,0.55);
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+        .cta-button {
+
+            min-height: 49px;
+
+            padding:
+                0 22px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            color:
+                var(--dark);
+
+            background:
+                #FFFFFF;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            transition:
+                0.25s ease;
+
+        }
+
+        .cta-button:hover {
+
+            color:
+                #FFFFFF;
+
+            background:
+                var(--bronze);
+
+        }
+
+
+        /* =====================================================
+           Reveal
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(22px);
+
+            transition:
+                0.65s ease;
+
+        }
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =====================================================
+           Responsive
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .designer-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+            .choose-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+        @media (max-width: 760px) {
+
+            .container {
+
+                width:
+                    calc(100% - 32px);
+
+            }
+
+            .designers-hero {
+
+                min-height: 400px;
+
+            }
+
+            .designers-hero-inner {
+
+                padding:
+                    65px 0;
+
+            }
+
+            .toolbar-inner {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+            .search-box {
+
+                width: 100%;
+
+            }
+
+            .section-head {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+            .designers-section {
+
+                padding:
+                    80px 0
+                    90px;
+
+            }
+
+        }
+
+        @media (max-width: 580px) {
+
+            .container {
+
+                width:
+                    calc(100% - 24px);
+
+            }
+
+            .hero-title {
+
+                font-size: 42px;
+
+            }
+
+            .designer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .designer-cover {
+
+                height: 245px;
+
+            }
+
+            .designer-logo {
+
+                top: 211px;
+
+            }
+
+            .choose-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .filter-list {
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+
+    <main>
+
+
+        <section class="designers-hero">
+
+            <div class="container">
+
+                <div class="designers-hero-inner">
+
+
+                    <div class="breadcrumb">
+
+                        <a href="index.html">
+                            الرئيسية
+                        </a>
+
+                        <span
+                            class="breadcrumb-symbol"
+                        ></span>
+
+                        <span>
+                            المصممون
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-kicker">
+                        شبكة المنزل الراقي
+                    </div>
+
+
+                    <h1 class="hero-title">
+
+                        اختر المصمم
+                        <br>
+
+                        الأقرب إلى
+
+                        <span>
+                            رؤيتك.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        اكتشف مصممين ومكاتب تصميم
+                        متخصصة في العمارة والتصميم
+                        الداخلي والمجالس والحدائق،
+                        واطلع على أسلوب كل جهة
+                        وتخصصاتها قبل بدء التواصل.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="toolbar">
+
+            <div class="container">
+
+                <div class="toolbar-inner">
+
+
+                    <label class="search-box">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                        >
+
+                            <circle
+                                cx="11"
+                                cy="11"
+                                r="6"
+                            ></circle>
+
+                            <path
+                                d="M16 16l4 4"
+                            ></path>
+
+                        </svg>
+
+                        <input
+                            type="search"
+                            id="designerSearch"
+                            placeholder="ابحث باسم المكتب أو التخصص..."
+                        >
+
+                    </label>
+
+
+                    <div class="filter-list">
+
+                        <button
+                            class="filter-button active"
+                            data-filter="all"
+                            type="button"
+                        >
+                            الجميع
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="interior"
+                            type="button"
+                        >
+                            داخلي
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="architecture"
+                            type="button"
+                        >
+                            معماري
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="gardens"
+                            type="button"
+                        >
+                            حدائق
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="designers-section">
+
+            <div class="container">
+
+
+                <div class="section-head reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+                            مختاراتنا
+                        </div>
+
+                        <h2 class="section-title">
+
+                            خبرات متنوعة
+                            لمشاريع مختلفة.
+
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-description">
+
+                        استعرض المكاتب بحسب
+                        التخصص والمدينة وطبيعة المشروع،
+                        ثم اختر الجهة الأقرب لأسلوبك.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="designer-grid">
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="interior"
+                        data-search="استوديو نسق الرياض تصميم داخلي سكني"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85"
+                                alt="تصميم داخلي"
+                            >
+
+                            <span class="designer-city">
+                                الرياض
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            ن
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    استوديو نَسَق
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                تصميم داخلي سكني ومساحات
+                                معاصرة بخامات دافئة.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">داخلي</span>
+                                <span class="designer-tag">فلل</span>
+                                <span class="designer-tag">معاصر</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>42 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 4.9</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="architecture"
+                        data-search="مكتب أبعاد جدة معماري واجهات فلل"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+                                alt="فيلا معمارية"
+                            >
+
+                            <span class="designer-city">
+                                جدة
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            أ
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    مكتب أبعاد
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                عمارة فلل وواجهات وحلول
+                                خصوصية حديثة.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">معماري</span>
+                                <span class="designer-tag">واجهات</span>
+                                <span class="designer-tag">فلل</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>31 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 4.8</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="gardens"
+                        data-search="دار المشهد الخبر حدائق أفنية جلسات خارجية"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85"
+                                alt="حديقة فيلا"
+                            >
+
+                            <span class="designer-city">
+                                الخبر
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            د
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    دار المشهد
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                حدائق وأفنية ومسابح
+                                وجلسات خارجية.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">حدائق</span>
+                                <span class="designer-tag">أفنية</span>
+                                <span class="designer-tag">خارجي</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>27 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 4.9</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="interior"
+                        data-search="أثر للتصميم الرياض مجالس ضيافة داخلي"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85"
+                                alt="مجلس معاصر"
+                            >
+
+                            <span class="designer-city">
+                                الرياض
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            أ
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    أثر للتصميم
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                مجالس وضيافة بتفاصيل
+                                سعودية معاصرة.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">مجالس</span>
+                                <span class="designer-tag">ضيافة</span>
+                                <span class="designer-tag">داخلي</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>36 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 5.0</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="architecture"
+                        data-search="مدار العمارة المدينة معماري تخطيط فلل"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85"
+                                alt="عمارة فيلا"
+                            >
+
+                            <span class="designer-city">
+                                المدينة
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            م
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    مدار العمارة
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                تخطيط فلل يوازن بين
+                                الخصوصية والضوء الطبيعي.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">معماري</span>
+                                <span class="designer-tag">تخطيط</span>
+                                <span class="designer-tag">سكني</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>24 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 4.7</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="designer-card reveal"
+                        data-category="interior"
+                        data-search="رواق العلا تراثي معاصر داخلي"
+                    >
+
+                        <div class="designer-cover">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1100&q=85"
+                                alt="تصميم تراثي معاصر"
+                            >
+
+                            <span class="designer-city">
+                                العلا
+                            </span>
+
+                        </div>
+
+                        <div class="designer-logo">
+                            ر
+                        </div>
+
+                        <div class="designer-card-body">
+
+                            <div class="designer-heading">
+
+                                <h3>
+                                    رِواق
+                                </h3>
+
+                                <span class="verified">
+                                    ◆ موثق
+                                </span>
+
+                            </div>
+
+                            <p class="designer-specialty">
+                                تصميم مستوحى من الحجر
+                                والألوان الصحراوية.
+                            </p>
+
+                            <div class="designer-tags">
+                                <span class="designer-tag">تراثي معاصر</span>
+                                <span class="designer-tag">داخلي</span>
+                                <span class="designer-tag">طبيعي</span>
+                            </div>
+
+                            <div class="designer-meta">
+                                <span>19 مشروعًا</span>
+                                <span class="rating"><strong>★</strong> 4.9</span>
+                            </div>
+
+                            <a href="#" class="designer-link">
+                                عرض ملف المصمم
+                                <span>←</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="choose-section">
+
+            <div class="container">
+
+
+                <div class="section-head reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            قبل الاختيار
+                        </div>
+
+                        <h2 class="section-title">
+                            كيف تختار المصمم المناسب؟
+                        </h2>
+
+                    </div>
+
+                    <p class="section-description">
+
+                        راجع نوع المشاريع والأسلوب
+                        والخبرة ومدى توافقها مع
+                        احتياجات مشروعك.
+
+                    </p>
+
+                </div>
+
+
+                <div class="choose-grid">
+
+
+                    <article class="choose-card reveal">
+                        <span class="choose-number">01</span>
+                        <h3>راجع الأعمال</h3>
+                        <p>اختر من لديه مشاريع قريبة من الأسلوب الذي تبحث عنه.</p>
+                    </article>
+
+
+                    <article class="choose-card reveal">
+                        <span class="choose-number">02</span>
+                        <h3>حدد التخصص</h3>
+                        <p>داخلي، معماري، مجالس أو حدائق بحسب نطاق مشروعك.</p>
+                    </article>
+
+
+                    <article class="choose-card reveal">
+                        <span class="choose-number">03</span>
+                        <h3>حدد احتياجاتك</h3>
+                        <p>وضوح المساحة والميزانية والمتطلبات يجعل الاختيار أدق.</p>
+                    </article>
+
+
+                    <article class="choose-card reveal">
+                        <span class="choose-number">04</span>
+                        <h3>ابدأ التواصل</h3>
+                        <p>شارك التفاصيل والصور المرجعية قبل بدء الاتفاق.</p>
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+                    <div class="cta-content">
+
+                        <small>
+                            المنزل الراقي
+                        </small>
+
+                        <h2>
+                            لم تجد التخصص الذي تبحث عنه؟
+                        </h2>
+
+                        <p>
+                            أخبرنا عن مشروعك وسنساعدك
+                            في تحديد نوع المصمم أو المكتب
+                            الأنسب لاحتياجاتك.
+                        </p>
+
+                        <a
+                            href="contact.html"
+                            class="cta-button"
+                        >
+                            اتصل بنا
+                            <span>←</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <div id="footer-placeholder"></div>
+
+
+    <script>
+
+        /* =====================================================
+           Load Components
+        ====================================================== */
+
+        async function loadComponent(
+            containerId,
+            filePath
+        ) {
+
+            const container =
+                document.getElementById(
+                    containerId
+                );
+
+
+            if (!container) {
+
+                return;
+
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        filePath
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "تعذر تحميل " +
+                        filePath
+                    );
+
+                }
+
+
+                container.innerHTML =
+                    await response.text();
+
+
+                container
+                    .querySelectorAll(
+                        "script"
+                    )
+                    .forEach(
+                        function (oldScript) {
+
+                            const newScript =
+                                document.createElement(
+                                    "script"
+                                );
+
+
+                            Array
+                                .from(
+                                    oldScript.attributes
+                                )
+                                .forEach(
+                                    function (attribute) {
+
+                                        newScript.setAttribute(
+                                            attribute.name,
+                                            attribute.value
+                                        );
+
+                                    }
+                                );
+
+
+                            newScript.textContent =
+                                oldScript.textContent;
+
+
+                            oldScript.replaceWith(
+                                newScript
+                            );
+
+                        }
+                    );
+
+
+            } catch (error) {
+
+                console.error(
+                    error
+                );
+
+            }
+
+        }
+
+
+        Promise.all([
+
+            loadComponent(
+                "header-placeholder",
+                "header.html"
+            ),
+
+            loadComponent(
+                "footer-placeholder",
+                "footer.html"
+            )
+
+        ]);
+
+
+
+        /* =====================================================
+           Search + Filter
+        ====================================================== */
+
+        const cards =
+            document.querySelectorAll(
+                ".designer-card"
+            );
+
+
+        const search =
+            document.getElementById(
+                "designerSearch"
+            );
+
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".filter-button"
+            );
+
+
+        let currentFilter =
+            "all";
+
+
+        function updateCards() {
+
+            const query =
+                (
+                    search?.value ||
+                    ""
+                )
+                    .trim()
+                    .toLowerCase();
+
+
+            cards.forEach(
+                function (card) {
+
+                    const category =
+                        card.dataset.category;
+
+
+                    const keywords =
+                        (
+                            card.dataset.search ||
+                            ""
+                        )
+                            .toLowerCase();
+
+
+                    const matchesFilter =
+                        currentFilter ===
+                        "all" ||
+                        category ===
+                        currentFilter;
+
+
+                    const matchesSearch =
+                        !query ||
+                        keywords.includes(
+                            query
+                        );
+
+
+                    card.style.display =
+                        matchesFilter &&
+                        matchesSearch
+                            ? ""
+                            : "none";
+
+                }
+            );
+
+        }
+
+
+        filterButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        filterButtons.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        currentFilter =
+                            button.dataset.filter;
+
+
+                        updateCards();
+
+                    }
+                );
+
+            }
+        );
+
+
+        if (search) {
+
+            search.addEventListener(
+                "input",
+                updateCards
+            );
+
+        }
+
+
+
+        /* =====================================================
+           Reveal
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+            const observer =
+                new IntersectionObserver(
+
+                    function (
+                        entries,
+                        revealObserver
+                    ) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry
+                                        .target
+                                        .classList
+                                        .add(
+                                            "visible"
+                                        );
+
+
+                                    revealObserver
+                                        .unobserve(
+                                            entry.target
+                                        );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.08
+                    }
+
+                );
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    observer.observe(
+                        element
+                    );
+
+                }
+            );
+
+        } else {
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "visible"
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           Temporary Profile Links
+        ====================================================== */
+
+        document
+            .querySelectorAll(
+                '.designer-link[href="#"]'
+            )
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+                        }
+                    );
+
+                }
+            );
+
+
+    </script>
+
+
+</body>
+
+</html>
