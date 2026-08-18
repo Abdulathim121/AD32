@@ -5366,7 +5366,10 @@
 
                 const response =
                     await fetch(
-                        filePath
+                        filePath,
+                        {
+                            cache: "no-store"
+                        }
                     );
 
 
@@ -5479,12 +5482,12 @@
 
             loadComponent(
                 "header-placeholder",
-                "header.html"
+                "header.html?v=20260818-designers"
             ),
 
             loadComponent(
                 "footer-placeholder",
-                "footer.html"
+                "footer.html?v=20260818"
             )
 
         ]);
